@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Single Price Grid Component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+    :root {
+      /* primary colors */
+      --Cyan: hsl(179, 62%, 43%);
+      --Light-Cyan: hsl(179, 59%, 49%);
+      --Bright-Yellow: hsl(71, 73%, 54%);
+      --Darker-Yellow: hsl(71, 95%, 40%);
+      /* neutral colors */
+      --Light-Gray: hsl(204, 43%, 93%);
+      --Grayish-Blue: hsl(218, 22%, 67%);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      font-size: 16px;
+      font-family: 'Karla', sans-serif;
+      background: var(--Light-Gray);
+    }
+
+    .container {
+      border-radius: 10px;
+      box-shadow: 0 0 10px var(--Grayish-Blue);
+      display: flex;
+      flex-direction: column;
+      width: 600px;
+
+    }
+
+/* Join Our Community Div */
+    .joc-div {
+      background-color: white;
+      padding: 35px;
+      width: auto;
+      border-radius: 10px 10px 0 0;
+    }
+
+    .joc-div h1 {
+      color: var(--Cyan);
+      padding-bottom: 20px;
+    }
+
+    .joc-div h2 {
+      color: var(--Bright-Yellow);
+      font-size: 17px;
+      padding-bottom: 10px;
+      font-weight: 700;
+    }
+
+    .joc-div p {
+      color: var(--Grayish-Blue);
+      font-size: 15px;
+      line-height: 25px;
+    }
+/* Join Our Community Div */
+
+.container-2 {
+      display: flex;
+      border-radius: 10px;
+    }
+
+/* Monthly Subscription Div */
+    .ms-div {
+      background: var(--Cyan);
+      padding: 35px;
+      width: 50%;
+      color: white;
+      border-radius: 0 0 0 10px;
+    }
+    .price {
+      display: flex;
+      align-items: center;
+      padding-bottom: 10px;
+    }
+    .ms-div h2 {
+      font-size: 17px;
+      padding-bottom: 15px;
+    }
+    .ms-div p {
+      font-size: 15px;
+    }
+    .price h3 {
+      font-size: 32px;
+      padding-right: 10px;
+    }
+
+    .price p {
+      color: var(--Light-Gray);
+      font-size: 15px;
+    }
+
+    .ms-div-button {
+      padding-top: 30px;
+    }
+    .ms-div-button button {
+      border: none;
+      width: 100%;
+      padding: 15px;
+      border-radius: 5px;
+      background-color: var(--Bright-Yellow);
+      box-shadow: 0 2px 7px rgba(8, 102, 102, 0.399);
+      color: white;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    button:hover {
+      cursor: pointer;
+      background-color: var(--Darker-Yellow);
+    }
+/* Monthly Subscription Div */
+
+/* Why Us Div */
+    .wu-div {
+      background: var(--Light-Cyan);
+      padding: 30px;
+      width: 50%;
+      border-radius: 0 0 10px 0;
+    }
+
+    .wu-div h3 {
+      color: white;
+      padding-bottom: 20px;
+    }
+
+    .wu-div ul {
+
+    }
+    .wu-div ul li {
+      list-style-type: none;
+      line-height: 20px;
+      color: var(--Light-Gray);
+      font-weight: 400;
+      font-size: 14px;
+    }
+/* Why Us Div */
+
+/* Footer */
+    .attribution { font-size: 11px; text-align: center; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); top: 85%;}
+    .attribution a { color: hsl(228, 45%, 44%); }
+/* Footer */
+
+/* Responsiveness */
+
+/* Mobile */
+@media screen and (max-width: 431px) {
+
+  body {
+    height: 125vh;
+    max-width: 431px;
+  }
+
+  .container {
+    width: 350px;
+  }
+
+  .ms-div {
+    width: auto;
+    border-radius: 0;
+  }
+
+  .wu-div {
+    width: auto;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .container-2 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .attribution {
+    position: relative;
+  }
+}
+@media screen and (max-width: 361px) {
+
+body {
+  height: 130vh;
+  max-width: 361x;
+}
+
+.container {
+  width: 300px;
+}
+
+.ms-div {
+  width: auto;
+  border-radius: 0;
+}
+
+.wu-div {
+  width: auto;
+  border-radius: 0 0 10px 10px;
+}
+
+.container-2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.attribution {
+  position: relative;
+}
+}
+@media screen and (max-width: 359px) {
+
+body {
+  height: 200vh;
+  max-width: 359px;
+}
+
+.container {
+  width: 275px;
+}
+
+.ms-div {
+  width: auto;
+  border-radius: 0;
+}
+
+.wu-div {
+  width: auto;
+  border-radius: 0 0 10px 10px;
+}
+
+.container-2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.attribution {
+  position: relative;
+}
+}
+/* Mobile */
+
+</style>
+</head>
+<body>
+  
+<!-- Main Content -->
+  <main>
+    <section id="main-content">
+      <div class="container">
+        <div class="joc-div">
+          <h1>Join our community</h1>
+          <h2>30-day, hassle-free money back guarantee</h2>
+          <p>Gain access to our full library of tutorials along with expert code reviews. Perfect for any developers who are serious about honing their skills.</p>
+        </div>
+        <div class="container-2">
+        <div class="ms-div">
+          <h2>Monthly Subscription</h2>
+          <div class="price">
+            <h3> &dollar;29</h3>
+            <p>per month</p>
+          </div>
+          <p>Full access for less than &dollar;1 a day</p>
+          <div class="ms-div-button">
+            <button>Sign Up</button>
+          </div>
+        </div>
+        <div class="wu-div">
+          <h3>Why Us</h3>
+          <ul>
+            <li>Tutorials by industry experts</li>
+            <li>Peer &amp; expert code review</li>
+            <li>Coding exercises</li>
+            <li>Access to our GitHub repos</li>
+            <li>Community Forum</li>
+            <li>Flashcard decks</li>
+            <li>New videos every week</li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+  </main>
+
+<!-- Footer -->
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://www.frontendmentor.io/profile/Cairowisk">Cairo Garbelotto</a>.
+    </p>
+  </footer>
+</body>
+</html>
